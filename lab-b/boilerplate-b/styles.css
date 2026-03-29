@@ -1,0 +1,126 @@
+body {
+  background-color: #f3fff3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+  padding: 16px;
+  gap: 8px;
+}
+
+.Searchbar {
+  display: flex;
+  position: relative;
+
+  border: 1px solid black;
+  width: 200px;
+  height: 28px;
+}
+
+.Searchbar > input {
+  border: 0;
+  outline: none;
+}
+
+.SearchbarIcon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+}
+
+.IconWrapper {
+  height: 24px;
+  width: 24px;
+  cursor: pointer
+}
+
+.TaskList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0px;
+  padding: 0px;
+
+  border: 1px solid black;
+
+
+}
+
+
+.Task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 50px;
+  padding: 0 8px;
+}
+
+.Title {
+  outline: none;
+  border: none;
+}
+
+.Task > div:nth-child(1) {
+  display: flex;
+  width: 300px;
+
+  flex-direction: row;
+  gap: 8px;
+}
+
+.Task .IconWrapper {
+  margin-left: auto;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Form h2 {
+  margin-bottom: 8px;
+}
+
+.Form > div {
+  display: flex;
+  gap: 16px;
+}
+
+.Form input[type="text"] {
+  outline: none;
+  /* 100% - gap - gap - button - input[date] */
+  width: calc(100% - 16px - 16px - 64px - 128px);
+}
+
+.Form button {
+  width: 64px;
+}
+
+.Form input[type="date"] {
+  width: 128px;
+}
+
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
