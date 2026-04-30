@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Wiktor Schab (57836) - PTW LAB D</title>
+
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <script src="main.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <section id="search-screen">
+                <h1>Cukierkowa<br>Pogoda</h1>
+                <p>Wpisz miasto, aby sprawdzić prognozę!</p>
+
+
+                <form id="search-form" class="search-box">
+                    <input
+                        type="text"
+                        id="city-input"
+                        placeholder="np. Szczecin..."
+                        required
+                    />
+                    <button type="submit">GO!</button>
+                </form>
+                <span id="error-info"></span>
+            </section>
+            <section id="weather-screen">
+                <button class="back-btn" onclick="setShowSearch()">← Wróć</button>
+                <div class="desktop-grid">
+                    <div class="hero-card">
+                        <div class="city-name" id="display-city"></div>
+                        <div id="temp-stat" class="main-temp"></div>
+                        <div id="weather-badge" class="weather-badge"></div>
+                    </div>
+
+                    <div class="toggle-container">
+                        <button class="toggle-btn active" id="btn-hourly" onclick="togglePeriod('hourly')">GODZINOWA</button>
+                        <button class="toggle-btn" id="btn-daily" onclick="togglePeriod('daily')">DNIOWA</button>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 id="chart-title">Temperatura (24h)</h3>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="weatherChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span>WIATR</span>
+                            <strong id="wind-stat"></strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>OPADY</span>
+                            <strong id="rain-stat"></strong>
+                        </div>
+                        <div class="stat-item" style="box-shadow: 6px 6px 0px var(--turquoise);">
+                            <span>WILGOTNOŚĆ</span>
+                            <strong id="hum-stat"></strong>
+                        </div>
+                        <div class="stat-item" style="box-shadow: 6px 6px 0px var(--turquoise);">
+                            <span>CIŚNIENIE</span>
+                            <strong id="uv-stat"></strong>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
