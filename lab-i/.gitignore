@@ -1,0 +1,52 @@
+# Zależności (Nigdy nie dodawaj tego folderu do gita)
+node_modules/
+jspm_packages/
+
+# Pliki środowiskowe / Tajne klucze (Zabezpieczenie przed wyciekiem haseł)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logi (Pliki tekstowe generowane podczas błędów)
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dane środowiska uruchomieniowego (Runtime) i pamięć podręczna
+pids
+*.pid
+*.seed
+*.pid.lock
+.npm
+.eslintcache
+
+# Foldery z testami i pokryciem kodu (np. Jest, Mocha)
+coverage/
+.nyc_output/
+
+# Foldery budowania projektu (Jeśli używasz TypeScript / Babel)
+dist/
+build/
+
+# Pliki systemowe i edytorów kodu
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+
+# Lokalne katalogi pnpm
+.pnpm-debug.log*
+
+# Sklep pnpm (występuje tylko wtedy, gdy uruchomisz pnpm z flagą --store-dir lokalnie)
+.pnpm-store/
+
+# Wirtualny sklep pnpm (tworzony wewnątrz node_modules)
+# Zostanie zignorowany automatycznie przez regułę node_modules/,
+# ale warto go dopisać dla czytelności projektów monorepo:
+.pnpm-virtual-store/
